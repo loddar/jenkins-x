@@ -1,1 +1,9 @@
 buildPack: gradle
+pipelineConfig:
+  pipelines:
+    pullRequest:
+      postBuild:
+        preSteps:
+        - name: custom-step
+          command: echo
+          args: ["=========== Custom Step ============"]
